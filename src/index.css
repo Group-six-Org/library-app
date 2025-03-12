@@ -1,1 +1,41 @@
 @import "tailwindcss";
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: fit-content;
+  padding: 10px 5%;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0;
+}
+.bookHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  background: linear-gradient(to right, black, yellow);
+  background-clip: text;
+  color: transparent;
+}
+.readMore {
+  display: block;
+  padding: 10px 3rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  background-color: rgb(250, 191, 80);
+  color: white;
+  border: none;
+  margin: auto;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-bottom-right-radius: 25px;
+  transition: 0.3s ease-in-out;
+}
+.readMore:hover{
+    background-color: orange;
+}
