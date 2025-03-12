@@ -1,11 +1,19 @@
-import React from "react";
 import PagesLayouts from "../layouts/PagesLayouts";
-
+import BooksCard from "./BooksCard";
 const Book = () => {
+  const cards = [1, 2, 3, 4, 5, 6, 7, 8];
+
   return (
     <PagesLayouts>
-      <div>Books</div>
-      <h2>hollo world this is the all books page</h2>
+      <div>
+        <h2 className="bookHeader">Dosomething@Bookshop.onion</h2>
+        <div className="container">
+          {cards.map((card) => (
+            <BooksCard />
+          ))}
+        </div>
+        <button className="readMore">Read more</button>
+      </div>
     </PagesLayouts>
   );
 };
