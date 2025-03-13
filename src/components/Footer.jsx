@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router";
- 
 
 const Footer = () => {
   return (
@@ -50,6 +49,7 @@ const Footer = () => {
     </div>
     
   )
+
 };
 
 export default Footer;
