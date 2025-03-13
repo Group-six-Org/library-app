@@ -1,9 +1,9 @@
-.myContainer{
+.myContainer {
   width: 100%;
 }
 .content {
   width: 300px;
-  background-color: white;
+  background-color: rgb(215, 244, 254);
   margin: 0;
   padding: 10px;
   margin: 10px;
@@ -38,14 +38,32 @@
 .prevBtn {
   width: 100%;
   padding: 10px;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 255, 0.541),
-    rgba(255, 166, 0, 0.493)
-  );
+  background: linear-gradient(to right, #0d9488, rgba(255, 166, 0, 0.493));
   color: white;
   font-weight: 900;
   cursor: pointer;
   border-radius: 20px;
   margin-top: 20px;
+}
+.appContainer {
+  text-align: center;
+  padding: 20px;
+}
+
+.searchBar {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.searchBar:focus {
+  outline: none;
+}
+.booksList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }

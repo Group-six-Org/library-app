@@ -1,0 +1,24 @@
+.appContainer {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.searchBar {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.searchBar:focus {
+  outline: none;
+}
+.booksList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+}
