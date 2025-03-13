@@ -1,54 +1,74 @@
 import React from "react";
+import backgroundImage from "../assets/img/library1.jpg"; // Import the background image
+import { Link } from "react-router";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900">
+    <section className="w-full">
       {/* Hero Section */}
       <div
-        className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
-        style={{ backgroundImage: "url('/path-to-your-image.jpg')" }}
+        className="relative w-full min-h-screen flex flex-col items-center justify-center bg-cover bg-center px-6"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="bg-black bg-opacity-50 p-10 rounded-xl">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        {/* Glassmorphic Effect */}
+        <div className="relative bg-white/20 backdrop-blur-lg border border-white/30 p-8 rounded-xl text-white max-w-2xl text-center shadow-lg">
           <h1 className="text-4xl font-bold mb-4">
-            Discover, Read, and Manage Your Favorite Books!
+            Welcome to the <span className="text-yellow-300">Read</span>Wide
+            Digital Library
           </h1>
           <p className="text-lg mb-6">
-            Easily browse, add, and track books in our digital library.
+            Read, add, edit and delete books effortlessly.
           </p>
-          <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg text-lg font-semibold">
-            Explore Books
-          </button>
+          <Link to="/books" className="block">
+            <button className="bg-teal-600 hover:bg-teal-700 px-6 py-3 rounded-lg text-lg font-semibold">
+              Explore Now
+            </button>
+          </Link>
         </div>
       </div>
 
-      {/* About Section */}
-      <section className="py-16 px-8 text-center">
-        <h2 className="text-3xl font-bold mb-4">About Our Library App</h2>
-        <p className="text-lg max-w-2xl mx-auto">
-          Our platform allows book lovers and library managers to easily store,
-          track, and explore books in a digital collection.
+      {/* New Second Section - "Why Choose Us" */}
+      <div className="py-30 px-6 bg-white text-center">
+        <h2 className="text-3xl font-bold mb-6 text-gray-800">
+          Why Choose Our Library?
+        </h2>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          Our digital library offers a seamless reading experience with a vast
+          collection of books, easy accessibility, and a user-friendly
+          interface.
         </p>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-16 px-8 bg-white">
-        <h2 className="text-3xl font-bold text-center mb-8">Features</h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="p-6 shadow-lg rounded-lg text-center bg-gray-50">
-            <h3 className="text-xl font-semibold mb-2">📚 View All Books</h3>
-            <p>Browse through our vast digital book collection.</p>
-          </div>
-          <div className="p-6 shadow-lg rounded-lg text-center bg-gray-50">
-            <h3 className="text-xl font-semibold mb-2">🔍 Search Books</h3>
-            <p>Find books quickly with our easy-to-use search feature.</p>
-          </div>
-          <div className="p-6 shadow-lg rounded-lg text-center bg-gray-50">
-            <h3 className="text-xl font-semibold mb-2">📝 Add Books</h3>
-            <p>Add, edit, and organize books seamlessly.</p>
-          </div>
+        {/* Features List */}
+        <div className="flex justify-center gap-6 py-18">
+          {/* Huge Collection Link */}
+          <Link to="/books" className="block">
+            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+              📚{" "}
+              <span className="text-teal-600 font-semibold">
+                Huge Collection
+              </span>
+              <p className="text-gray-600">
+                Access thousands of books across various genres.
+              </p>
+            </div>
+          </Link>
+
+          {/* Add Books Link */}
+          <Link to="/add-book" className="block">
+            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+              ➕{" "}
+              <span className="text-purple-600 font-semibold">Add Books</span>
+              <p className="text-gray-600">
+                Easily add new books to your library collection.
+              </p>
+            </div>
+          </Link>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
