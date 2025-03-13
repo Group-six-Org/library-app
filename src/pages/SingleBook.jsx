@@ -1,27 +1,29 @@
+import SingleBookCard from "./SingleBookCard";
 import bookImg from "../assets/books.jpg";
+import PagesLayouts from "../layouts/PagesLayouts";
 
+const book = {
+  title: "No Sweetness Here",
+  publisher: "Fiction Press",
+  year: 1499,
+  description: `
+  A compelling story about life and culture.
+  Lorem ipsum dolor, sit amet consectetur adipisicing 
+  elit. Reiciendis beatae, provident placeat harum,
+   rerum voluptate optio nisi, ipsam ab excepturi tenetur.
+    Laudantium consequuntur non modi corporis quidem 
+    eligendi facere quibusdam 
+  `,
+  coverImage: bookImg, // Replace with actual book cover URL
+  available: true,
+};
 const SingleBook = () => {
   return (
-    <div className="bookContainer flex align-center justify-center">
-      <div className="bookImg">
-        <img src={bookImg} alt="book" />
+    <PagesLayouts>
+      <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
+        <SingleBookCard book={book} />
       </div>
-      <div className="bookInfo">
-        <dl>
-          <dt>title</dt>
-          <dd>this is the title</dd>
-          <dt>Author</dt>
-          <dd>dosomething@author.onion</dd>
-          <dt>Year Published</dt>
-          <dd>this book@published.1148</dd>
-          <dt>Publisher</dt>
-          <dd>Publisher@frosty.onion</dd>
-          <dt>Availability</dt>
-          <dd>book@availability.onion</dd>
-        </dl>
-      </div>
-      <h2>Dosomething@singleBook.onion</h2>
-    </div>
+    </PagesLayouts>
   );
 };
 

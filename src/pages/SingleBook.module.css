@@ -1,0 +1,21 @@
+.bookContainer {
+  width: 90%;
+  min-height: 100vh;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.bookContainer img {
+  width: 90%;
+}
+.bookInfo {
+  background-color: white;
+  width: 50%;
+}
+.bookInfo dt {
+  font-size: 1.5em;
+  font-weight: 900;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
