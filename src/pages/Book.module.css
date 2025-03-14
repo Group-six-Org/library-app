@@ -3,7 +3,7 @@
 }
 .content {
   width: 300px;
-  background-color: rgb(215, 244, 254);
+  background-color: rgb(255, 255, 255);
   margin: 0;
   padding: 10px;
   margin: 10px;
@@ -19,25 +19,32 @@
 .details {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
+  padding-left: 15%;
+}
+.details p {
+  font-weight: 900;
+  color: gray;
 }
 .title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.514);
+  color: gray;
 }
-.autor {
+.author {
   font-size: 1rem;
   font-weight: 900;
+  color: gray;
 }
 .yearPublished {
   font-size: 1rem;
   font-weight: 900;
+  color: gray;
 }
 .prevBtn {
-  width: 100%;
-  padding: 10px;
+  width: 70%;
+  padding: 5px;
   background: linear-gradient(to right, #0d9488, rgba(255, 166, 0, 0.493));
   color: white;
   font-weight: 900;
@@ -66,4 +73,24 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-left: 0;
+}
+.delBtn {
+  padding: 5px;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: red;
+  cursor: pointer;
+  font-size: 0.8rem;
 }
