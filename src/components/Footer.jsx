@@ -3,7 +3,9 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="bg-teal-700 text-white">
+
+    
+  <div className="bg-teal-700 text-white">
         <div className=" flex flex-col md:flex-row justify-between gap-5 p-10 mt-20"> 
             <div>
                 <Link to="/" className="text-4xl font-extrabold tracking-wide text-white">
@@ -45,6 +47,7 @@ const Footer = () => {
                 </div>
               </div>
         </div> 
+        <hr className="border-gray-100 my-4" />
         <p className="mt-2 text-center">copyright@ Readwide Library 2025 all Rights Reserved </p>
     </div>
     
